@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var user: UserManager
-    @StateObject private var timer = TimerCounter() // Работает с классом и передается по иерархии
+//    @EnvironmentObject var user: UserManager
+    @StateObject private var timer = TimerCounter() // Работает с классом
+    @AppStorage("currentName") var currentName: String?
     
     var body: some View {
         VStack {
-            Text("Hi, \(user.name)")
+            Text("Hello, \(currentName ?? "")")
                 .font(.largeTitle)
                 .offset(x: 0, y: 100)
             Text("\(timer.counter)")
@@ -29,13 +30,10 @@ struct ContentView: View {
     }
 }
 
-
-
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(UserManager())
+//            .environmentObject(UserManager())
     }
 }
 

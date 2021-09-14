@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct RegisterView: View {
+//    @EnvironmentObject var user: UserManager
     
-    @EnvironmentObject var user: UserManager
+    @AppStorage("currentName") var currentName = ""
+    @AppStorage("isActive") var isActive: Bool?
+    
     @State private var name = ""
     var isValidName: Bool {
         name.count >= 3
@@ -23,7 +26,6 @@ struct RegisterView: View {
                 Text("\(name.count)")
                     .foregroundColor(isValidName ? .blue : .red)
             }
-            
             Button(action: registerUser ) {
                 HStack {
                   Image(systemName: "checkmark.circle")
@@ -37,8 +39,10 @@ struct RegisterView: View {
     
     private func registerUser() {
         if !name.isEmpty {
-            user.name = name
-            user.isRegister.toggle()
+//            user.name = name
+            currentName = name
+//            user.isRegister.toggle()
+            isActive = true
         }
     }
 }

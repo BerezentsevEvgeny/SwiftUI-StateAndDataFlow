@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct LogOutButtonView: View {
+//    @EnvironmentObject var user: UserManager
+    @AppStorage("isActive") var isActive: Bool?
+    
     var body: some View {
-        Button(action: {}) {
+        Button(action: { isActive = false }) {
             Text("LogOut")
                 .font(.title)
                 .fontWeight(.bold)
@@ -26,5 +29,6 @@ struct LogOutButtonView: View {
 struct LogOutButtonView_Previews: PreviewProvider {
     static var previews: some View {
         LogOutButtonView()
+//            .environmentObject(UserManager())
     }
 }
