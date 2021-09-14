@@ -17,12 +17,12 @@ class TimerCounter: ObservableObject {
     
     func startTimer() {
         if counter > 0 {
-            
-            timer = Timer.scheduledTimer(timeInterval: 1,
-                                         target: self,
-                                         selector: #selector(updateCounter),
-                                         userInfo: nil,
-                                         repeats: true)
+            timer = Timer.scheduledTimer(
+                timeInterval: 1,
+                target: self,
+                selector: #selector(updateCounter),
+                userInfo: nil,
+                repeats: true)
         }
         buttonDidTapped()
     }

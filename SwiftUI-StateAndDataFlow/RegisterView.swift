@@ -11,18 +11,28 @@ struct RegisterView: View {
     
     @EnvironmentObject var user: UserManager
     @State private var name = ""
+    var isValidName: Bool {
+        name.count >= 3
+    }
     
     var body: some View {
         VStack {
-            TextField("Enter your name...", text: $name)
-                .multilineTextAlignment(.center)
+            HStack {
+                TextField("Enter your name...", text: $name)
+                    .multilineTextAlignment(.center)
+                Text("\(name.count)")
+                    .foregroundColor(isValidName ? .blue : .red)
+            }
+            
             Button(action: registerUser ) {
                 HStack {
                   Image(systemName: "checkmark.circle")
                   Text("OK")
                 }
             }
+            .disabled(!isValidName)
         }
+        .padding(.horizontal, 40)
     }
     
     private func registerUser() {
@@ -36,5 +46,6 @@ struct RegisterView: View {
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
         RegisterView()
+            
     }
 }
