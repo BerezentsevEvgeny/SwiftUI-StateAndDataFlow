@@ -9,12 +9,13 @@ import SwiftUI
 
 @main
 struct SwiftUI_StateAndDataFlowApp: App {
-    @StateObject private var userManager = UserManager() // Можно передать в нужную точку приложения
+//    @StateObject private var userManager = UserManager() // Можно передать в нужную точку приложения
+    private let user = DataManger.shared.fetchUser()
     
     var body: some Scene {
         WindowGroup {
             StarterView()
-                .environmentObject(userManager) // Передаем в окружение
+                .environmentObject(UserManager(user: user)) // Передаем в окружение
         }
     }
 }

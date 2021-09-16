@@ -15,6 +15,8 @@
 		6344A8FE26EFD54D003CC776 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6344A8FD26EFD54D003CC776 /* RegisterView.swift */; };
 		6344A90026EFD691003CC776 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6344A8FF26EFD691003CC776 /* UserManager.swift */; };
 		6344A90226EFD8C3003CC776 /* StarterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6344A90126EFD8C3003CC776 /* StarterView.swift */; };
+		639E50C426F1EB6E0039CD43 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639E50C326F1EB6E0039CD43 /* DataManager.swift */; };
+		639E50C626F1ED9E0039CD43 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639E50C526F1ED9E0039CD43 /* Model.swift */; };
 		63B4C94926F08B1C00ACE6A5 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B4C94826F08B1C00ACE6A5 /* ButtonView.swift */; };
 		63B4C94B26F08C7700ACE6A5 /* LogOutButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B4C94A26F08C7700ACE6A5 /* LogOutButtonView.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +32,8 @@
 		6344A8FD26EFD54D003CC776 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		6344A8FF26EFD691003CC776 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		6344A90126EFD8C3003CC776 /* StarterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterView.swift; sourceTree = "<group>"; };
+		639E50C326F1EB6E0039CD43 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		639E50C526F1ED9E0039CD43 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		63B4C94826F08B1C00ACE6A5 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		63B4C94A26F08C7700ACE6A5 /* LogOutButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,13 +69,11 @@
 			isa = PBXGroup;
 			children = (
 				6344A8EC26EFC915003CC776 /* SwiftUI_StateAndDataFlowApp.swift */,
-				6344A90126EFD8C3003CC776 /* StarterView.swift */,
-				6344A8FD26EFD54D003CC776 /* RegisterView.swift */,
-				6344A8EE26EFC915003CC776 /* ContentView.swift */,
+				639E50C226F1EB4F0039CD43 /* Views */,
 				6344A8FB26EFCC92003CC776 /* TimerCounter.swift */,
-				63B4C94826F08B1C00ACE6A5 /* ButtonView.swift */,
-				63B4C94A26F08C7700ACE6A5 /* LogOutButtonView.swift */,
+				639E50C726F1EDA40039CD43 /* Model */,
 				6344A8FF26EFD691003CC776 /* UserManager.swift */,
+				639E50C326F1EB6E0039CD43 /* DataManager.swift */,
 				6344A8F026EFC91A003CC776 /* Assets.xcassets */,
 				6344A8F526EFC91A003CC776 /* Info.plist */,
 				6344A8F226EFC91A003CC776 /* Preview Content */,
@@ -85,6 +87,26 @@
 				6344A8F326EFC91A003CC776 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		639E50C226F1EB4F0039CD43 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6344A90126EFD8C3003CC776 /* StarterView.swift */,
+				6344A8FD26EFD54D003CC776 /* RegisterView.swift */,
+				6344A8EE26EFC915003CC776 /* ContentView.swift */,
+				63B4C94826F08B1C00ACE6A5 /* ButtonView.swift */,
+				63B4C94A26F08C7700ACE6A5 /* LogOutButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		639E50C726F1EDA40039CD43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				639E50C526F1ED9E0039CD43 /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,8 +183,10 @@
 				63B4C94B26F08C7700ACE6A5 /* LogOutButtonView.swift in Sources */,
 				6344A90226EFD8C3003CC776 /* StarterView.swift in Sources */,
 				6344A8EF26EFC915003CC776 /* ContentView.swift in Sources */,
+				639E50C626F1ED9E0039CD43 /* Model.swift in Sources */,
 				6344A90026EFD691003CC776 /* UserManager.swift in Sources */,
 				6344A8ED26EFC915003CC776 /* SwiftUI_StateAndDataFlowApp.swift in Sources */,
+				639E50C426F1EB6E0039CD43 /* DataManager.swift in Sources */,
 				63B4C94926F08B1C00ACE6A5 /* ButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

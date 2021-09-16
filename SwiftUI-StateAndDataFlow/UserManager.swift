@@ -8,6 +8,16 @@
 import Combine
 
 class UserManager: ObservableObject {
-    @Published var isRegister = false
-    var name = ""
+    @Published var user = User()
+    
+    var isValidName: Bool {
+        user.name.count >= 3
+    }
+    
+    init() {}
+    
+    init(user: User) {
+        self.user = user
+    }
+  
 }
