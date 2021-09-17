@@ -70,10 +70,8 @@
 			children = (
 				6344A8EC26EFC915003CC776 /* SwiftUI_StateAndDataFlowApp.swift */,
 				639E50C226F1EB4F0039CD43 /* Views */,
-				6344A8FB26EFCC92003CC776 /* TimerCounter.swift */,
+				63488F7B26F500BD00B1EFCB /* Services */,
 				639E50C726F1EDA40039CD43 /* Model */,
-				6344A8FF26EFD691003CC776 /* UserManager.swift */,
-				639E50C326F1EB6E0039CD43 /* DataManager.swift */,
 				6344A8F026EFC91A003CC776 /* Assets.xcassets */,
 				6344A8F526EFC91A003CC776 /* Info.plist */,
 				6344A8F226EFC91A003CC776 /* Preview Content */,
@@ -87,6 +85,16 @@
 				6344A8F326EFC91A003CC776 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		63488F7B26F500BD00B1EFCB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6344A8FF26EFD691003CC776 /* UserManager.swift */,
+				639E50C326F1EB6E0039CD43 /* DataManager.swift */,
+				6344A8FB26EFCC92003CC776 /* TimerCounter.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		639E50C226F1EB4F0039CD43 /* Views */ = {

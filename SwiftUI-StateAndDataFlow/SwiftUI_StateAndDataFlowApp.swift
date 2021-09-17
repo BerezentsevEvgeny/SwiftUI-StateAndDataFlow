@@ -9,7 +9,6 @@ import SwiftUI
 
 @main
 struct SwiftUI_StateAndDataFlowApp: App {
-//    @StateObject private var userManager = UserManager() // Можно передать в нужную точку приложения
     private let user = DataManger.shared.fetchUser()
     
     var body: some Scene {

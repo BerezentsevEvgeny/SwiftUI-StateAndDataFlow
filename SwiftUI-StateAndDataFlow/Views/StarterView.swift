@@ -10,14 +10,12 @@ import SwiftUI
 struct StarterView: View {
     @EnvironmentObject var userManager: UserManager
     
-//    @AppStorage("isActive") var isActive = false //
-    
     var body: some View {
         Group {
             if userManager.user.isRegistred {
-                RegisterView()
-            } else {
                 ContentView()
+            } else {
+                RegisterView()
             }
         }
     }

@@ -21,14 +21,15 @@ class DataManger {
     }
     
     func fetchUser() -> User {
-        guard let userData = userData else { return User(name: "Sample", isRegistred: false) }
-        let user = try? JSONDecoder().decode(User.self, from: userData)
-        guard let user = user else { return User(name: "Sample", isRegistred: false) }
+        
+        guard let user = try? JSONDecoder().decode(User.self, from: userData ?? Data()) else { return User()}
         return user
     }
     
-    func deleteUser() {
-        
+    func deleteUser(userManager: UserManager) {
+        userManager.user.isRegistred = false
+        userData = nil
+        userManager.user.name = ""
     }
     
     

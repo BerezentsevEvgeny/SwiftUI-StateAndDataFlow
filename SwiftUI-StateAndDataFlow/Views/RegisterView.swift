@@ -9,15 +9,7 @@ import SwiftUI
 
 struct RegisterView: View {
     @EnvironmentObject var userManager: UserManager
-    
-//    @AppStorage("currentName") var currentName = ""
-//    @AppStorage("isActive") var isActive: Bool?
-    
-//    @State private var name = ""
-//    var isValidName: Bool {
-//        name.count >= 3
-//    }
-    
+        
     var body: some View {
         VStack {
             HStack {
@@ -32,21 +24,15 @@ struct RegisterView: View {
                   Text("OK")
                 }
             }
-            .disabled(userManager.isValidName)
+            .disabled(!userManager.isValidName)
         }
         .padding(.horizontal, 40)
     }
     
     private func registerUser() {
         if !userManager.user.name.isEmpty {
+            userManager.user.isRegistred.toggle()
             DataManger.shared.saveUser(user: userManager.user)
-//            user.name = name
-//            currentName = name
-//            user.isRegister.toggle()
-            
-//            isActive = true
-            userManager.user.isRegistred = true
-            
         }
     }
 }
@@ -54,6 +40,7 @@ struct RegisterView: View {
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
         RegisterView()
+            .environmentObject(UserManager())
             
     }
 }
