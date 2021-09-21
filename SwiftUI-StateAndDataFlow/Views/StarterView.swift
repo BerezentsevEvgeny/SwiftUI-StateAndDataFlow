@@ -23,7 +23,12 @@ struct StarterView: View {
 
 struct StarterView_Previews: PreviewProvider {
     static var previews: some View {
-        StarterView()
-            .environmentObject(UserManager())
+        if #available(iOS 15.0, *) {
+            StarterView()
+                .environmentObject(UserManager())
+                .previewInterfaceOrientation(.portrait)
+        } else {
+            // Fallback on earlier versions
+        }
     }
 }
